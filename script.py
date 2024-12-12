@@ -36,11 +36,11 @@ MetadataCatalog.get("brain_mri_train").set(thing_classes=["brain"])
 cfg = get_cfg()
 cfg.DATASETS.TRAIN = ("brain_mri_train",)
 cfg.DATASETS.TEST = ("brain_mri_val",)
-cfg.DATALOADER.NUM_WORKERS = 0
 cfg.MODEL.WEIGHTS = "detectron2://ImageNetPretrained/MSRA/R-50.pkl"  # Modello pre-addestrato
-cfg.SOLVER.IMS_PER_BATCH = 1 #immagini per batch
-cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 16 # Numero di ROI per immagine
-cfg.SOLVER.BASE_LR = 0.00015 #learning rate
+cfg.DATALOADER.NUM_WORKERS = 0
+cfg.SOLVER.IMS_PER_BATCH = 2 #immagini per batch
+cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 80 # Numero di ROI per immagine
+cfg.SOLVER.BASE_LR = 0.00025 #learning rate
 cfg.SOLVER.MAX_ITER = 500  # iterazioni massime
 cfg.SOLVER.WARMUP_ITERS = 50  # aumenta gradualmente il LR nelle prime x iterazioni fino a valore
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 1  # Cambia in base al numero delle classi
@@ -76,7 +76,7 @@ predictor = DefaultPredictor(cfg)
 image_path = os.path.join(script_dir, "test", "test3.jpg")
 image = cv2.imread(image_path)
 outputs = predictor(image)
-
+print(outputs)
 # Visualizza i risultati con bordi rossi per le istanze rilevate
 v = Visualizer(image[:,:,::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2)
 v = v.draw_instance_predictions(outputs['instances'].to('cpu'))
