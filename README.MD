@@ -5,7 +5,7 @@ Per la segmentazione medica, potrebbe essere necessario:
 	•	Preprocessare le immagini MRI: Converti il formato DICOM in PNG/JPEG o usa pacchetti come pydicom per leggere direttamente i file DICOM.
 	•	Aumentare i dati: Usa tecniche di data augmentation specifiche per immagini mediche.
 
-*** COSTRUZIONE DEL DATASET ***
+### COSTRUZIONE DEL DATASET
 Dopo la selezione delle immagini adeguate usare labelme per generare le etichette dei dati
 
 *** DOPO LA GENERAZIONE DI LABELME E LA CONVERSIONE ***
@@ -31,14 +31,14 @@ Per creare i file train_annotations.json e val_annotations.json:
 Usare uno script per dividere automaticamente il dataset COCO in due file
 
 
-*** Istruzioni d'uso complessive *** 
+### Istruzioni d'uso complessive 
 1. Inserisci immagini dentro labelme
 2. Salva tutti i file json per ogni immagine in labelme/json_files
 3. esegui labelme_to_coco.py
 4. esegui create_annotation.py
 5. esegui script.py
 
-*** Dati Mostrati durante l'addestramento ***
+### Dati Mostrati durante l'addestramento
 	•	eta: ETA (Estimated Time of Arrival): tempo stimato rimanente per completare l’addestramento.
 	•	iter: Iterazione corrente: l’addestramento è arrivato alla i iterazione.
 	•	total_loss: Perdita totale: misura complessiva dell’errore del modello alla 19ª iterazione.Una perdita più bassa indica che il modello si sta avvicinando a una migliore approssimazione dei dati.
