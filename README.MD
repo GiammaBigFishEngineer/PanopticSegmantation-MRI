@@ -42,3 +42,5 @@ Usare uno script per dividere automaticamente il dataset COCO in due file
 	•	eta: ETA (Estimated Time of Arrival): tempo stimato rimanente per completare l’addestramento.
 	•	iter: Iterazione corrente: l’addestramento è arrivato alla i iterazione.
 	•	total_loss: Perdita totale: misura complessiva dell’errore del modello alla 19ª iterazione.Una perdita più bassa indica che il modello si sta avvicinando a una migliore approssimazione dei dati.
+
+link download dataset = https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2
