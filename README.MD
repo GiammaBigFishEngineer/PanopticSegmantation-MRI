@@ -20,12 +20,12 @@ Dopo la selezione delle immagini adeguate usare labelme per generare le etichett
 2. Divisione del Dataset
 
 Per creare i file train_annotations.json e val_annotations.json:
-	1.	Dividi il dataset:
-		-	Separare le immagini in due insiemi:
-		-	Training set: Circa il 80-90% delle immagini.
-		-	Validation set: Circa il 10-20% delle immagini.
-	2.	Mantenere la coerenza degli ID:
-		-	Aggiorna gli ID delle immagini e delle annotazioni per ciascun file.
+	1. Dividi il dataset:
+		Separare le immagini in due insiemi:
+		Training set: Circa il 80-90% delle immagini.
+		Validation set: Circa il 10-20% delle immagini.
+	2. Mantenere la coerenza degli ID:
+		Aggiorna gli ID delle immagini e delle annotazioni per ciascun file.
 
 3. Script Python per Dividere il Dataset
 Usare uno script per dividere automaticamente il dataset COCO in due file
