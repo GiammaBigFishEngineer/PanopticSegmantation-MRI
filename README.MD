@@ -8,7 +8,7 @@ Per la segmentazione medica, potrebbe essere necessario:
 ### COSTRUZIONE DEL DATASET
 Dopo la selezione delle immagini adeguate usare labelme per generare le etichette dei dati
 
-*** DOPO LA GENERAZIONE DI LABELME E LA CONVERSIONE ***
+### DOPO LA GENERAZIONE DI LABELME E LA CONVERSIONE 
 1. Comprensione di train_annotations.json e val_annotations.json
 	•	train_annotations.json: Contiene le annotazioni per le immagini di training.
 	•	val_annotations.json: Contiene le annotazioni per le immagini di validazione.
