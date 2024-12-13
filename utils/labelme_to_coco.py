@@ -2,6 +2,11 @@ import os
 import json
 from labelme import utils
 import numpy as np
+import sys 
+
+# Aggiungi il percorso della cartella principale al sys.path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from Config import Config
 
 def labelme_to_coco(labelme_folder, output_file):
     images = []
